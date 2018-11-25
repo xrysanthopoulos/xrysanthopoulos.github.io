@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+/////     /////   |||||  \\\\\||/////
+/////     /////   |||||   \\\\||////
+/////     /////            \\\||///
+///////////////   /////     \\||//
+///////////////   /////      \||/
+/////     /////   /////
+/////     /////   /////     ||||||
+/////     /////   /////     ||||||
+-->
+<!--Thank you to visit my website!! (•◡•) Feel free to contact with me.-->
+
+<head>
+  <meta charset="utf-8">
+  <title>Dimitris Xrysanthopoulos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="D.png" rel="shortcut icon">
+  <meta name="description" content="Dimitris Xrysanthopoulos Web End Developer">
+  <meta name="keywords" content="dimitris xrysanthopoulos, xrysanthopoulos, front end web developer, web developer">
+  <meta name="author" content="Dimitris Xrysanthopoulos">
+  <meta property="og:locale" content="el_GR">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Dimitris Xrysanthopoulos">
+  <meta property="og:description" content="Dimitris Xrysanthopoulos Web Developer">
+  <meta property="og:url" content="https://github.com/xrysanthopoulos-dim">
+  <meta property="og:site_name" content="Dimitris Xrysanthopoulos">
+  <meta property="og:image" content="mountain.png">
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Open+Sans|Roboto" rel="stylesheet">  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <link rel="stylesheet"  href="index.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="snowflake.js"></script>
+</head>
+
+<body onresize="window_width()" onload="snowFall()">
+
+  <section class="main">
+    <canvas id="canvas"></canvas>
+    <video class="hero-video" poster "mountain.JPG" autoplay muted loop>
+      <source src="video.webm" type="video/webm" />
+      <source src="video.mp4" type="video/mp4" />
+    </video>
+    <div class="hello">
+      <div class="shake-snow">
+        <p class="shake">Hello World !! <br> I 'm Dimitris Xrysanthopoulos.</p>
+      </div>
+    </div>
+  </section>
+  <section class="about" id="about">
+    <h2>About me.</h2>
+    <div class="row">
+      <div class="col-md-8">
+        <div class="personal-info">
+          <div class="p-info">
+            <p>I'm a self-taught <span>Web developer</span> & <span>Maker</span>.<br>I was born in a beautiful city in <a class="city" target="_blank" href="https://www.youtube.com/watch?v=vFsZrVzAJjc">Patra</a>. I'm also an enthusiastic to build <span>Robot</span>, <span>IoT</span> Projects, <span>Web Apps</span> and anything. Right now I'm interesting to learn new things and practicing competitive computer.</p>
+            <p>I am also passionate about micro-controler and algorithms.</p>
+            <p>When I'm not in front of a computer screen, i would cooking, listening music, reading something, traveling particularly by train.<br> I'm Water Polo player. I enjoy travelling and i have travelled Europe by rail.</p>
+          </div>
+          <div class="social">
+                <a class="social-icon" href="https://www.instagram.com/dimitris.xrysanthopoulos" target="_blank"><img src="https://cdn.worldvectorlogo.com/logos/instagram-2-1.svg"></a>
+                <a class="social-icon" href="https://github.com/xrysanthopoulos-dim" target="_blank"><img class="github" src="github.svg"></a>
+                <a class="social-icon" href="https://www.linkedin.com/in/dimitris-xrysanthopoulos/" target="_blank"><img class="linkedin" src="linkedin.svg" ></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <img id="personal-img" src="DSC_0818.JPG">
+      </div>
+    </div>
+  </section>
+  <section class="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li class="skills-keys"><span class="category">Programming Languages:</span> <span>HTML, CSS, JavaScript, C, Python, PHP, SQL</span></li>
+      <li class="skills-keys"><span class="category">Familiar Frameworks\Libraries:</span> <span>Bootstrap, Node.js, ReactJS, React Native</span></li>
+      <li class="skills-keys"><span class="category">Databases:</span> <span>MySQL, MongoDB</span></li>
+      <li class="skills-keys"><span class="category">Tools:</span> <span>Atom, Bracket, Git, Sketch</span></li>
+      <li class="skills-keys"><span class="category">Familiar Hardware:</span> <span>Arduino, Raspberry Pi</span></li>
+    </ul>
+  </section>
+  <section class="projects">
+    <h2>Projects</h2>
+    <div class="units-projects container justify-content-center nav nav-pills" id="projects">
+      <button class="nav-link btn active" onclick="onClickFunction(); filterSelection('all')" id="myBtn2">All Projects</button>
+      <button class="nav-link btn" onclick="onClickFunction(); filterSelection('web')">Web</button>
+      <button class="nav-link btn" onclick="onClickFunction(); filterSelection('arduino')">Arduino</button>
+      <button class="nav-link btn" onclick="onClickFunction(); filterSelection('rasp')">Raspberry</button>
+      <button class="nav-link btn" onclick="onClickFunction(); filterSelection('apps')">Apps</button>
+      <button class="nav-link btn" onclick="onClickFunction(); filterSelection('3d-print')">3D Printing</button>
+    </div>
+
+    <div class="project-row">
+      <div class="row" id="row">
+        <div class="col-md-6 filter web show">
+          <div class="card">
+            <img class="card-image-top" src="casadimarmo.png" alt="...">
+            <div class="card-body">
+              <h3 class="card-title">Casa di marmo</h3>
+              <p class="card-text">A web page for a familiar company. </p>
+            </div>
+            <div class="row btn-learn ">
+              <div class="col-md-9 col-sm-9">
+                <a class="btn-info" target="_blank" href="https://www.casadimarmo.gr"><button class="btn-card btn">Learn more</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 filter arduino show">
+          <div class="card">
+            <img class="card-image-top" src="fT9VGigBtbo-b4f54e58-614b-4017-b87c-84c40ec508ad-snapshot-thumb.png" alt="...">
+            <div class="card-body">
+              <h3 class="card-title">Security alarm system</h3>
+              <p class="card-text">Security alarm with arduino, keypad and RFID.</p>
+            </div>
+            <div class="row btn-learn ">
+              <div class="col-md-9 col-sm-9">
+                <a class="btn-info" target="_blank" href="https://github.com/xrysanthopoulos-dim/Security-system"><button class= "btn-card btn">Learn more</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 filter web show">
+          <div class="card">
+            <img class="card-image-top" src="2.png" alt="...">
+            <div class="card-body">
+              <h3 class="card-title">Wikipedia Viewer</h3>
+              <p class="card-text">Search machine in Wikipedia.</p>
+            </div>
+            <div class="row btn-learn ">
+              <div class="col-md-9 col-sm-9">
+                <a class="btn-info" target="_blank" href="https://codepen.io/dim-cs/full/PpzJew/"><button class= "btn-card btn">Learn more</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 filter web show">
+          <div class="card">
+            <img class="card-image-top" src="3.png" alt="...">
+            <div class="card-body">
+              <h3 class="card-title">Random Quote Machine</h3>
+              <p class="card-text">Quote.</p>
+            </div>
+            <div class="row btn-learn ">
+              <div class="col-md-9 col-sm-9">
+                <a class="btn-info" target="_blank" href="https://codepen.io/dim-cs/full/LxwjML/"><button class= "btn-card btn">Learn more</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 filter web show">
+          <div class="card">
+            <img class="card-image-top" src="5.png" alt="...">
+            <div class="card-body">
+              <h3 class="card-title">Weather</h3>
+              <p class="card-text">Show the weather in position access.</p>
+            </div>
+            <div class="row btn-learn ">
+              <div class="col-md-9 col-sm-9">
+                <a class="btn-info" target="_blank" href="https://codepen.io/dim-cs/full/mWVMxg/"><button class= "btn-card btn">Learn more</a></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="contact">
+    <h2>Feel free to contact with me...</h2>
+    <div class="row contact-displays">
+      <div class="col-md-12 contact-mths">
+        <p class="contact-mth">via <a class="msg-text" href="http://m.me/dimitri.xrysanthopoulos" target="_blank">Messenger <img class="msg-icon" src="facebook-messenger.svg"></a></p>
+        <p class="contact-mth">or, with above <a class="social-hyp" href="#about">social media</a></p>
+    </div>
+    <div class="send-messenge-">
+    </div>
+  </section>
+  <script src="responsive_about.js"></script>
+  <script src="favorite_click.js"></script>
+  <script src="cards.js"></script>
+  <script src="snowflakes_resize_width.js"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111965034-1"></script>
+</body>
+
+</html>
