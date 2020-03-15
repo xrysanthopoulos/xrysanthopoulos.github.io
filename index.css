@@ -284,10 +284,18 @@ img.card-image-top {
   text-transform: full-width;
   float: left;
   text-decoration: none;
-  background-color: #41C6C7;
   margin-bottom: 2.5%;
   cursor: pointer;
   color: #000;
+}
+
+.btn-play {
+  color: #fff;
+  background-color:  #0078ff;
+  cursor: pointer;
+}
+.btn-play:hover{
+  opacity: 0.8;
 }
 
 .btn-info {
@@ -295,6 +303,7 @@ img.card-image-top {
   background-color: #41C6C7;
   cursor: pointer;
 }
+
 .contact {
   border-top: 2px solid black;
   background-color: #212424;
@@ -303,7 +312,6 @@ img.card-image-top {
 }
 
 .contact h2 {
-
   font-size: 2.7em;
 }
 
